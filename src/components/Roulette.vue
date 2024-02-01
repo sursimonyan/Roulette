@@ -62,7 +62,7 @@ const winBonus = () => {
         <img src="@/assets/images/roulette/win-animation.svg" alt="light">
       </div>
       <SpinButton 
-        :class="rouletteSpin && 'cursor-default'"
+        :class="rouletteSpin && 'cursor-default hover:brightness-100'"
         @click="winBonus"
       >
        {{ spinCount }}
