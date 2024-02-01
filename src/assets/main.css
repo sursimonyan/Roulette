@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  background: url('./images/main-bg.jpg') center / cover no-repeat;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 880px) {
+
+  body {
+    background: url('./images/mobile-main-bg.jpg') center no-repeat;
+    overflow-y: auto;
+  }
+
+}
