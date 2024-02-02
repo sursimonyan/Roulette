@@ -5,7 +5,7 @@
       <p class="mb-3 text-lg">Ваш выигрыш</p>
       <p class="text-[40px] text-[#F9D193] leading-[1.3] mobile-l:text-[26px]">150 ФС +225%</p>
       <p class="mb-7 leading-[1.24] mobile-l:mb-4">на депозит</p>
-      <button class="relative h-12 px-6 text-sm bg-[#CE2951] rounded-3xl z-[2] mobile-l:h-10">Забрать приз</button>
+      <button class="relative h-12 px-6 text-sm bg-[#CE2951] rounded-3xl z-[2] hover:bg-[#D72F58] mobile-l:h-10">Забрать приз</button>
       <div class="absolute bottom-0 left-0">
         <img src="../assets/images/yourwin/yourwin-gift.png" alt="your win gift">
       </div>
