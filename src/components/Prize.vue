@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
   <div class="relative flex-1 flex items-center gap-5 mb-5 z-10 tablet:flex-col tablet:order-1 tablet:mb-0 mobile-l:gap-3 mobile-l:mb-0">
       <div 
-        class="prize relative origin-center w-[188px] h-[142px] z-[10] mobile-l:w-[158px] mobile-l:h-[122px]"
+        class="prize relative origin-center w-[188px] h-[142px] z-[10] mobile-l:w-[140px] mobile-l:h-[105px]"
         :class="spinCount < 2 && 'prize__win'"
       >
         <div class="prize__front absolute top-0 left-0 w-full h-full">
@@ -32,7 +32,7 @@ const props = defineProps({
         </div>
       </div>
       <div 
-        class="prize relative origin-center w-[188px] h-[142px] z-[10] mobile-l:w-[158px] mobile-l:h-[122px]"
+        class="prize relative origin-center w-[188px] h-[142px] z-[10] mobile-l:w-[140px] mobile-l:h-[105px]"
         :class="spinCount === 0 && 'prize__win'"
       >
         <div class="prize__front absolute top-0 left-0 w-full h-full">

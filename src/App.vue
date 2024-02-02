@@ -43,12 +43,12 @@ const spinPlay = () => {
 </script>
 
 <template>
-  <div class="relative max-w-[1400px] w-full mx-auto pt-6 px-5 text-white z-10">
+  <div class="relative max-w-[1400px] w-full mx-auto pt-6 px-5 text-white z-10 mobile-l:pt-2">
     <div class="relative mb-5 z-10 tablet:mb-8 mobile-l:mb-3">
       <a href="#" class="block max-w-[195px] mb-2 mx-auto mobile-l:max-w-[128px] mobile-l:mb-[6px]">
         <img src="./assets/images/logo.png" alt="logo">
       </a>
-      <h1 class="text-[28px] leading-[1.4] font-bold text-white text-center mobile-l:text-base">
+      <h1 class="text-[28px] leading-[1.4] font-bold text-white text-center mobile-l:text-sm">
         БОНУС ДО 
         <span class=" text-[#DFB778]">35 000 РУБ</span> 
         НОВЫМ ИГРОКАМ!
