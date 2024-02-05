@@ -11,10 +11,10 @@ const showYourWinShow = 500;
 
 const isMobileL = useMediaQuery('(min-width: 880px)');
 
-const spinCount = ref(2);
-const rouletteSpin = ref(false);
-const isShowYourWin = ref(false);
-const isShowYourWinShow = ref(false);
+const spinCount = ref<number>(2);
+const rouletteSpin = ref<boolean>(false);
+const isShowYourWin = ref<boolean>(false);
+const isYourWinLightAnimation = ref<boolean>(false);
 
 const spinPlay = () => {
   if (!rouletteSpin.value) {
@@ -32,7 +32,7 @@ const spinPlay = () => {
           isShowYourWin.value = true;
 
           setTimeout(() => {
-            isShowYourWinShow.value = true;
+            isYourWinLightAnimation.value = true;
           }, showYourWinShow);
         }
       }, showYourWin);
@@ -62,7 +62,7 @@ const spinPlay = () => {
         :spinCount="spinCount"
         :rouletteSpin="rouletteSpin"
         :isShowYourWin="isShowYourWin"
-        :isShowYourWinShow="isShowYourWinShow"
+        :isYourWinLightAnimation="isYourWinLightAnimation"
         @spin-play="spinPlay"
       />    
       <Parallax v-if="isMobileL" />

@@ -2,25 +2,9 @@
 import YourWin from './YourWin.vue';
 import RouletteElements from './RouletteElements.vue';
 import SpinButton from './SpinButton.vue';
+import type { ISpinCount, IRouletteSpin, IisShowYourWin, IisYourWinLightAnimation } from '@/types/types';
 
-const props = defineProps({
-  spinCount: {
-    type: Number,
-    required: true,
-  },
-  rouletteSpin: {
-    type: Boolean,
-    required: true,
-  },
-  isShowYourWin: {
-    type: Boolean,
-    required: true,
-  },
-  isShowYourWinShow: {
-    type: Boolean,
-    required: true,
-  },
-});
+const props = defineProps<ISpinCount & IRouletteSpin & IisShowYourWin & IisYourWinLightAnimation>();
 
 const emit = defineEmits(['spin-play']);
 
@@ -57,25 +41,25 @@ const winBonus = () => {
       </div>
       <div 
         class="roulette__star absolute top-0 left-0 z-20"
-        :class="{'roulette__star_animation': !spinCount}"
+        :class="{'roulette__star_animation': !props.spinCount}"
       >
         <img src="@/assets/images/roulette/win-animation.svg" alt="light">
       </div>
       <SpinButton 
-        :class="rouletteSpin && 'cursor-default hover:brightness-100'"
+        :class="props.rouletteSpin && 'cursor-default hover:brightness-100'"
         @click="winBonus"
       >
        {{ spinCount }}
       </SpinButton>
     </div>
     <YourWin 
-      v-if="isShowYourWin"
+      v-if="props.isShowYourWin"
       class="opacity-0"
-      :class="{'roulette__yourwin': isShowYourWinShow}"
+      :class="{'roulette__yourwin': props.isYourWinLightAnimation}"
     />
     <RouletteElements 
-      :spinCount="spinCount"
-      :rouletteSpin="rouletteSpin"
+      :spinCount="props.spinCount"
+      :rouletteSpin="props.rouletteSpin"
     />
   </div>
 </template>
