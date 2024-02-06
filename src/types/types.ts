@@ -17,3 +17,9 @@ export interface IisShowYourWin {
 export interface IisYourWinLightAnimation {
   isYourWinLightAnimation: boolean;
 }
+
+export interface IRouletteItem {
+  index: number;
+  title?: string;
+  subtitle?: string;
+}
