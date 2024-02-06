@@ -40,6 +40,7 @@ const forwardsRotate = computed(() => {
       :title="rouletteItem.title"
       :subtitle="rouletteItem.subtitle"
       :index="index"
+      :key="rouletteItem.id"
     />
   </div>
 </template>
