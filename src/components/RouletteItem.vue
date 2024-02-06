@@ -9,19 +9,15 @@ const darkOrLight = computed(() => {
 })
 
 const rotateDeg = computed(() => {
-  if ((props.index * 45) < 135) {
-    return `rotate-${props.index * 45}`;
-  }
-
-  return `rotate-[${props.index * 45}deg]`;
+  return `transform: translateX(-50%) rotate(${props.index * 45}deg)`;
 })
 
 </script>
 
 <template>
   <div
-    class="rouletteitem absolute left-1/2 flex justify-center max-w-[210px] max-h-[238px] w-1/2 h-1/2 pt-8 px-3 text-xl text-white -translate-x-1/2 origin-bottom text-cebter mobile-l:pt-5"
-    :class="rotateDeg"
+    class="rouletteitem absolute left-1/2 flex justify-center max-w-[210px] max-h-[238px] w-1/2 h-1/2 pt-8 px-3 text-xl text-white origin-bottom text-cebter mobile-l:pt-5"
+    :style="rotateDeg"
   >
     <div class="px-8 select-none">
       <p class="text-lg leading-[1.24] mobile-l:text-xs">{{ props.title }}</p>
@@ -37,7 +33,7 @@ const rotateDeg = computed(() => {
 
 .rouletteitem {
   clip-path: polygon(100% 0, 50% 100%, 0 0);
-  background: v-bind(darkOrLight) center/contain no-repeat;
+  background: v-bind(darkOrLight) center / contain no-repeat;
 }
 
 </style>
