@@ -46,8 +46,6 @@ const forwardsRotate = computed(() => {
 
 <style lang="scss" scoped>
 .roulette__elements {
-  background: url('../assets/images/roulette/main-wheal.webp') center/contain no-repeat;
-  z-index: 9;
 
   &_spining {
     animation: rotate-spin 5s cubic-bezier(0, -0.02, 0, 1.01) forwards;
