@@ -2,9 +2,15 @@
 import YourWin from './YourWin.vue';
 import RouletteElements from './RouletteElements.vue';
 import SpinButton from './SpinButton.vue';
-import type { ISpinCount, IRouletteSpin, IisShowYourWin, IisYourWinLightAnimation } from '@/types/types';
 
-const props = defineProps<ISpinCount & IRouletteSpin & IisShowYourWin & IisYourWinLightAnimation>();
+interface IProps {
+  spinCount: number;
+  rouletteSpin: boolean;
+  isShowYourWin: boolean;
+  isYourWinLightAnimation: boolean;
+}
+
+const props = defineProps<IProps>();
 
 const emit = defineEmits(['spin-play']);
 

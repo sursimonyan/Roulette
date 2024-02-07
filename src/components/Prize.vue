@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { type ISpinCount } from '../types/types';
 
-const props = defineProps<ISpinCount>();
+interface IProps {
+  spinCount: number;
+}
+
+const props = defineProps<IProps>();
 
 </script>
 <template>

@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import type { IRouletteSpin, ISpinCount } from '../types/types';
 import RouletteItem from './RouletteItem.vue';
 import rouletteItemsData  from '../data/data.json';
 
-const props = defineProps<IRouletteSpin & ISpinCount>()
+interface IProps {
+  rouletteSpin: boolean;
+  spinCount: number;
+}
+
+const props = defineProps<IProps>()
 
 // Количеств оборотов колеса 
 const spinDefault = 3 * 360;
