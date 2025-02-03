@@ -26,7 +26,7 @@ const hasPadding = computed(() => {
     <div 
       :class="{'px-8 mobile-l:px-5': hasPadding}"
     >
-      <p class="text-lg leading-[1.24] mobile-l:text-xs">{{ props.title }}</p>
+      <p class="text-lg font-bold leading-[1.24] mobile-l:text-xs">{{ props.title }}</p>
       <p 
         v-if="props.subtitle"
         class="text-xs mobile-l:text-[8px]"
